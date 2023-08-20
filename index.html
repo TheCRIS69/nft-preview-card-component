@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | NFT preview card component</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    
+    <main class="flex-center"> 
+      
+      <article class="nft-card">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+        <div>
+        <img src="images/image-equilibrium.jpg" alt="A image of the NFT" class="nft-image">
+        <!-- <img src="./images/icon-view.svg" class="nft-image__hover"> -->
+        </div>
 
-  <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-
-<main class="flex-center"> 
-
-<article class="nft-card">
-  <img src="images/image-equilibrium.jpg" alt="A image of the NFT">
-  <h1 class="nft-title">Equilibrium #3429</h1>
-
-  <p class="nft-description">Our Equilibrium collection promotes balance and calm.</p>
+        <h1 class="nft-title">Equilibrium #3429</h1>
+        <p class="nft-description">Our Equilibrium collection promotes balance and calm.</p>
 
   <div class="nft-informations">
-    <div>
+
+    <div class="nft-informations__flex-group">
       <img src="./images/icon-ethereum.svg" alt="Ethereum icon">
       <span class="nft-informations__price">0.041 ETH</span>
     </div>
 
-    <div> 
+    <div class="nft-informations__flex-group"> 
       <img src="./images/icon-clock.svg" alt="Clock icon">
       <span class="nft-informations__time-left">3 days left</span>
     </div>
 
   </div>
   
-  <hr>
 
-  <div>
-  <img src="./images/image-avatar.png" alt="NFT creator avatar"> 
-  <p class="creator-credits">Creation of Jules Wyvern</p>
+
+  <div class="creator-credits">
+  <img src="./images/image-avatar.png" alt="A image with the NFT creator" class="creator-credits__image"> 
+  <p class="creator-credits__text">Creation of <span class="creator-credits__name">Jules Wyvern</span></p>
   </div>
 
 </article>
