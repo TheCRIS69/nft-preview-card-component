@@ -5,6 +5,7 @@
 
     --clr-primary-Soft-Blue: hsl(215, 51%, 70%);
     --clr-primary-Cyan: hsl(178, 100%, 50%);
+    --clr-primary-Cyan-Transparent: hsla(178, 100%, 50%, 0.5);
 
     --clr-neutral-BG-Dark-Blue: hsl(217, 54%, 11%); 
     --clr-neutral-CARD-Dark-Blue: hsl(216, 50%, 16%);
@@ -47,6 +48,8 @@
     overflow-wrap: break-word;
   }
 
+
+
 body {
     font-family: var(--ff-main);
     background-color: var(--clr-neutral-BG-Dark-Blue);
@@ -67,9 +70,28 @@ body {
     border-radius: 1rem;
 }
 
+
 .nft-image {
     border-radius: .5rem;
+    overflow: hidden;
     cursor: pointer;
+    position: relative;
+}
+
+.nft-image::after {
+    background-color: var(--clr-primary-Cyan-Transparent);
+    content: url(./images/icon-view.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: ease-out 0.5s;
+}
+
+.nft-image:hover::after {
+    opacity: 1;
 }
 
 
